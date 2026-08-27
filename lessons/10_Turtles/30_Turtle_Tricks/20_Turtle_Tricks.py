@@ -10,7 +10,7 @@ Refer to the previous program, Meet_Tina.py, for examples of how to use turtle c
 """
 
 # These lines are needed in most turtle programs
-import turtle                           # Tell Python we want to work with the turtle
+import turtle                           # Tell Python we want to work with the turtlethe turtle
 turtle.setup(600, 600, 0, 0)            # Set the size of the window
 tina = turtle.Turtle()                  # Create a turtle named tina
 
@@ -19,5 +19,18 @@ tina = turtle.Turtle()                  # Create a turtle named tina
 # tina.pencolor()
 
 ... # Your code here
-
+tina.forward(108)
+tina.pencolor('red')
+tina.left(72)
+tina.pencolor('blue') 
+tina.forward(108)
+tina.pencolor('green')
+tina.left(72)
+tina.forward(108)
+tina.pencolor('purple')
+tina.left(72) 
+tina.forward(108) 
+tina.pencolor('pink')
+tina.left(72)
+tina.forward(108)
 turtle.exitonclick()                    # Close the window when we click on it

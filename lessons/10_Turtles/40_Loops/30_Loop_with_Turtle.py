@@ -14,3 +14,17 @@ name: Loop With Turtle
 """
 
 ... # Your code here
+import turtle                           # Tell Python we want to work with the turtle
+turtle.setup(600, 600, 0, 0)            # Set the size of the window
+
+tina = turtle.Turtle()                  # Create a turtle named tina
+
+tina.pencolor('red')
+tina.begin_fill()
+tina.fillcolor('orange')
+for pent in range(5):
+    tina.forward(108)
+    tina.left(72)
+tina.end_fill()
+
+turtle.exitonclick()
