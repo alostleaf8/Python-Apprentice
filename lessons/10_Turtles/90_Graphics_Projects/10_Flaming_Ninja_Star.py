@@ -17,7 +17,7 @@ def get_random_color():
     return "#%06X" % (random.randint(0, 0xFFFFFF))
 
 
-colors = ["red", "blue", "green", "yellow", "orange"]
+colors = ["pink", "purple", "red", "lavender", "dark pink"]
 
 
 def get_next_color(i):
@@ -27,19 +27,19 @@ turtle.setup(600, 600, 0, 0)            # Set the size of the window
 window = turtle.Screen()
 
 base_size = 200  # the size of the black part of the star
-flame_size = 130  # the length of the flaming arms
+flame_size = 100  # the length of the flaming arms
 
 t = turtle.Turtle()
 t.shape("turtle")
 t.width(2)
 t.speed(0)
 
-for i in range(25):
+for i in range(20):
     t.pencolor(get_random_color())
     t.fillcolor(get_random_color())
     t.begin_fill()
     t.forward(64)
-    t.left(40)
+    t.right(40)
     t.forward(flame_size)
     t.right(170)
     t.forward(flame_size)
