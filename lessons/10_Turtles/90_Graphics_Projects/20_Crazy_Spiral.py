@@ -45,7 +45,7 @@ def make_a_shape(t):
     """Make a shape with turtle t. Make it go left or right or forward"""    
     t.pencolor("#C50303")
     t.begin_fill()
-    for triangle in range(3): 
+    for trapizoid in range(3): 
         tina.forward(100)
         tina.right(30) 
     t.goto(0,0) 
