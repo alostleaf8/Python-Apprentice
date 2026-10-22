@@ -60,5 +60,6 @@
     "**/.jtl": true,
     "requirements.txt": true,
     ".lessons": true
-  }
+  },
+  "python-envs.defaultEnvManager": "ms-python.python:system"
 }
