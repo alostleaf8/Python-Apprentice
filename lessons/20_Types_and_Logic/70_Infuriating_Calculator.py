@@ -21,20 +21,39 @@ simpledialog.askfloat() or simpledialog.askinteger(), and for the math operation
 you can ask for a string with simpledialog.askstring().
 """
 
-# Import the required modules
+from tkinter import messagebox, simpledialog, Tk # Import the required modules
 
-# Create a window object
+window = Tk() # Create a window object
 
-# Hide the window, hint: use the withdraw method
+window.withdraw() # Hide the window, hint: use the withdraw method
 
-# Ask the user for the first number
+number_1 =  simpledialog.askfloat("Your First Number", "Choose your first number") # Ask the user for the first number   
 
-# Ask the user for the second number
+number_2 =  simpledialog.askfloat("Your Second Number", "Choose your second number") # Ask the user for the second number   
 
-# Ask the user for the math operation
+math_operation = simpledialog.askstring("Your Math Operation", "Choose your math operation from the following: addition, subtraction, multiplication, or division.")# Ask the user for the math operation
+
+# variablessss
+add = number_1 + number_2
+subtract = number_1 - number_2
+multiply = number_1 * number_2
+try:
+    divide = number_1 / number_2
+except ZeroDivisionError:
+     messagebox.showerror("", "Error          ")
+
 
 # Use if-elif-else statements to provide the desired math operation on the numbers and display the result.
-
+if math_operation.lower()=="addition":
+    messagebox.showinfo("Addition", add)
+elif math_operation.lower()=="subtraction":
+    messagebox.showinfo("Subtraction", subtract)
+elif math_operation.lower()=="multiplication": 
+    messagebox.showinfo("Multiplication", multiply)
+elif math_operation.lower()=="division":
+    messagebox.showinfo("Division", divide)
+else:
+    messagebox.showerror("", "Undefined Value          ")
 # If the user enters an unknown operation, display an error message (use `messagebox.showerror()`).
 
-# Keep the window open
+window.mainloop()# Keep the window open

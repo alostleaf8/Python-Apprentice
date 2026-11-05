@@ -7,16 +7,16 @@ at the comments and the code snippets in the previous lessons, like
 50_My_Ages.py, to figure out how to complete the program.
 """
 
-# Import the required modules
+from tkinter import messagebox, simpledialog, Tk # Import the required modules
 
-# Create a window object
+window = Tk() # Create a window object
 
-# Hide the window, hint: use the withdraw method
+window.withdraw() # Hide the window, hint: use the withdraw method
 
-# Ask the user for the first number   
+number_1 =  simpledialog.askfloat("Your First Number", "Choose your first number") # Ask the user for the first number   
 
-# Ask the user for the second number
+number_2 =  simpledialog.askfloat("Your Second Number", "Choose your second number") # Ask the user for the second number
+sum = number_1 + number_2
+messagebox.showinfo("","The sum of your two numbers is " + str(sum))  # Display the sum of the two numbers
 
-# Display the sum of the two numbers 
-
-# Keep the window open
+window.mainloop() # Keep the window open
