@@ -37,7 +37,8 @@ uid: cKjBvzzU
 name: Fizzbuzz Gui Grid
 """
 
-from guizero import App, Box, Text
+from guizero import App, Box, Text, time
+time = 1
 
 app = App("Numbers Grid", layout="grid")
 
@@ -55,3 +56,17 @@ app = App("Numbers Grid", layout="grid")
 # Call Text(app, text='...', grid=[col, row], color=...) to display something.
 
 app.display()
+
+for row in range(10):
+    for col in range(1, 11):
+        print(f"{col + 10*row:>}", end = " " )
+    print() 
+for number in range(100):
+    if number%15==0:
+        print('🐍')
+    elif number%5==0:
+        print('🦡')
+    elif number%3==0:
+        print('🍄')
+    else:
+        print(number)
