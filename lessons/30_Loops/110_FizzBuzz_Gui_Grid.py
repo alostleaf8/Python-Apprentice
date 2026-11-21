@@ -36,37 +36,47 @@ HINT: You can use % and // to get the first and last digit of a number.
 uid: cKjBvzzU
 name: Fizzbuzz Gui Grid
 """
-
-from guizero import App, Box, Text, time
-time = 1
+from guizero import App, Box, Text
 
 app = App("Numbers Grid", layout="grid")
 
 # Create a 10x10 grid using nested loops
 # Or you can use a single loop and calculate the row and column
-
-
-
 # In the loop, calculate or increment the number
-
 # Use % to determine the display, using FizzBuzz rules
-
-# If you are displaying a number, calculate the sum of the digits and determine the color
-
+# If you are displaying a number, calculate the sum of the digits and determine the color=
 # Call Text(app, text='...', grid=[col, row], color=...) to display something.
+
+number = 12
+for row in range(10):
+  for col in range(10):
+    color = "black"  # Default color for the emojis
+
+    if number % 15 ==0:
+        display_text = "🐍"
+    elif number %5 ==0:
+        display_text = "🦡"
+    elif number % 3 ==0: 
+        display_text = "🍄"
+    else:
+        display_text = str(number)
+
+            # Calculate the sum of the digits using // and %
+    tens_digit = number // 10
+    ones_digit = number % 10
+    digit_sum = tens_digit + ones_digit
+
+    # Determining the color based on if the sum is even or odd
+    if digit_sum % 2 == 0:
+        color = "blue"
+    else:
+        color = "red"
+    # Printing the item in the grid cell
+    Text(app, text=display_text, grid=[col, row], color=color)
+
+    # Incrementing the number for the next cell
+number += 1
 
 app.display()
 
-for row in range(10):
-    for col in range(1, 11):
-        print(f"{col + 10*row:>}", end = " " )
-    print() 
-for number in range(100):
-    if number%15==0:
-        print('🐍')
-    elif number%5==0:
-        print('🦡')
-    elif number%3==0:
-        print('🍄')
-    else:
-        print(number)
+
